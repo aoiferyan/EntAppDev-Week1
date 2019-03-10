@@ -1,0 +1,43 @@
+﻿@page
+@model Week_1_worksheet.pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+    <form method="post">
+        <label asp-for=Number1></label>
+        <input asp-for=Number1 />
+
+        <label asp-for=Firstname></label>
+        <input asp-for=Firstname />
+
+        <label asp-for=DateTime></label>
+        <input asp-for=DateTime />
+
+        <label asp-for=IsContactAllowed></label>
+        <input asp-for=IsContactAllowed />
+
+
+        <fieldset>
+            <legend>Please choose a season</legend>
+            <input value="Winter" name="Operation" id="Winter" type="radio" /> <label for="Winter">Winter</label>
+            <input value="Spring" name="Operation" id="Spring" type="radio" /> <label for="Spring">Spring</label>
+            <input value="Summer" name="Operation" id="Summer" type="radio" /> <label for="Summer">Summer</label>
+            <input value="Autumn" name="Operation" id="Autumn" type="radio" /> <label for="Autumn">Autumn</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>@Model.Message</h1>
+</body>
+</html>
